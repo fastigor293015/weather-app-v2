@@ -1,0 +1,39 @@
+.main {
+  display: grid;
+  grid-template-columns: 1fr 506px;
+  gap: var(--gap);
+  align-items: center;
+  padding-bottom: 32px;
+}
+
+.error {
+  grid-column: 2 span;
+  height: 408px;
+  padding: 32px 32px 0;
+}
+
+@media all and (max-width: 1023px) {
+  .main {
+    grid-template-columns: auto;
+    gap: 48px;
+    padding-bottom: 24px;
+  }
+
+  .error {
+    grid-column: 1 span;
+    height: 758px;
+    padding: 24px 24px 0;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .main {
+    gap: var(--gap-secondary);
+    padding-bottom: 16px;
+  }
+
+  .error {
+    height: 520px;
+    padding: 16px 16px 0;
+  }
+}

@@ -1,0 +1,36 @@
+.label {
+  position: relative;
+  display: block;
+}
+
+.input {
+  border: none;
+  outline: none;
+  font: inherit;
+  width: 100%;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  color: var(--black-text);
+  border-radius: var(--border-radius);
+  background-color: var(--background);
+}
+
+.input::placeholder {
+  color: var(--color-placeholder);
+}
+
+.input:hover,
+.input:focus {
+  background-color: var(--background-hover);
+}
+
+@media all and (max-width: 767px) {
+
+  .input,
+  .input::placeholder {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 114%;
+  }
+}

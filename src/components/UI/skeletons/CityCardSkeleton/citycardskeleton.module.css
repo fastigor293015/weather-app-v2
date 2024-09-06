@@ -1,0 +1,97 @@
+.hero {
+  height: 100%;
+  padding: 8px 0;
+}
+
+.hero>* {
+  margin: 0 auto;
+}
+
+.day,
+.title,
+.weather {
+  margin-bottom: 8px;
+}
+
+.title {
+  height: 32px;
+  max-width: 160px;
+}
+
+.day {
+  max-width: 96px;
+}
+
+.time {
+  max-width: 48px;
+}
+
+.degree {
+  margin-top: 64px;
+  margin-bottom: 64px;
+  height: 112px;
+  max-width: 112px;
+}
+
+.weather {
+  max-width: 104px;
+}
+
+.feeling {
+  max-width: 64px;
+}
+
+@media all and (max-width: 1023px) {
+
+  .day,
+  .title,
+  .weather {
+    margin-bottom: 6px;
+  }
+
+  .degree {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+}
+
+@media all and (max-width: 767px) {
+
+  .day,
+  .title,
+  .weather {
+    margin-bottom: 4px;
+  }
+
+  .title {
+    height: 20px;
+    max-width: 72px;
+  }
+
+  .day {
+    height: 16px;
+    max-width: 56px;
+  }
+
+  .time {
+    height: 16px;
+    max-width: 32px;
+  }
+
+  .degree {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    height: 56px;
+    max-width: 56px;
+  }
+
+  .weather {
+    height: 16px;
+    max-width: 56px;
+  }
+
+  .feeling {
+    height: 16px;
+    max-width: 32px;
+  }
+}

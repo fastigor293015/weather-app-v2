@@ -1,0 +1,119 @@
+.queryItem {
+  --weather-card-image: transparent;
+  position: relative;
+  display: flex;
+  width: 100%;
+  border-radius: var(--border-radius);
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--black-text);
+  text-align: left;
+  background: var(--weather-card-image) center center no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background .2s ease-in-out;
+}
+
+.queryItem.notClickable {
+  pointer-events: none;
+}
+
+.queryItem::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, .1);
+}
+
+.cityInfo {
+  position: relative;
+  z-index: 2;
+  flex: 1 1 100%;
+  padding: 16px;
+  color: var(--white-text);
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 8px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.333;
+}
+
+.name {
+  font-size: inherit;
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.likeBtn {
+  position: relative;
+  z-index: 2;
+  display: block;
+  padding: 16px;
+  border-radius: var(--border-radius);
+  color: var(--white-text);
+  background: var(--background-main);
+  backdrop-filter: blur(50px);
+  transition: color .2s ease-in-out;
+}
+
+.likeBtn:hover,
+.likeBtn:focus {
+  color: var(--tab-color);
+}
+
+.likeBtn:disabled {
+  color: var(--text-disabled);
+}
+
+.likeBtn:disabled svg {
+  opacity: .4;
+}
+
+.error {
+  padding: 16px;
+}
+
+@media (max-width: 767px) {
+  .cityInfo {
+    padding: 12px;
+  }
+
+  .top {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+
+  .bottom {
+    font-size: 12px;
+    line-height: 1.333;
+  }
+
+  .likeBtn {
+    padding: 12px;
+  }
+
+  .likeBtn svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .error {
+    padding: 12px;
+  }
+}

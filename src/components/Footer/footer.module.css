@@ -1,0 +1,28 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+  color: var(--white-text);
+  padding-top: 32px;
+}
+
+.footerLink {
+  color: inherit;
+  text-decoration: underline;
+}
+
+@media all and (max-width: 1023px) {
+  .footer {
+    padding-top: 24px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .footer {
+    padding-top: 16px;
+    font-size: 12px;
+    line-height: 133%;
+  }
+}

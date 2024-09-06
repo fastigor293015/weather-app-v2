@@ -1,0 +1,56 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  border-radius: var(--border-radius);
+  background: var(--background-skeleton);
+}
+
+.title {
+  height: 20px;
+  max-width: 72px;
+}
+
+.icon {
+  height: 32px;
+  max-width: 32px;
+}
+
+.value {
+  height: 32px;
+  max-width: 56px;
+}
+
+.descr {
+  height: 32px;
+  max-width: 108px;
+}
+
+@media all and (max-width: 767px) {
+  .card {
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .title {
+    height: 16px;
+    max-width: 56px;
+  }
+
+  .icon {
+    height: 24px;
+    max-width: 24px;
+  }
+
+  .value {
+    height: 22px;
+    max-width: 48px;
+  }
+
+  .descr {
+    height: 26px;
+    max-width: 72px;
+  }
+}

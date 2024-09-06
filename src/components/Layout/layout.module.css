@@ -1,0 +1,34 @@
+.layout {
+  --main-bg-image: var(--background-placeholder);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  min-height: 100%;
+  padding: 32px;
+  background: var(--main-bg-image) center center no-repeat;
+  background-size: cover;
+  overflow-y: auto;
+}
+
+.layout.loading {
+  --main-bg-image: var(--background-placeholder);
+  transition: none;
+}
+
+.layout.overflow {
+  overflow: hidden;
+}
+
+@media all and (max-width: 1023px) {
+  .layout {
+    padding: 24px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .layout {
+    padding: 16px;
+  }
+}

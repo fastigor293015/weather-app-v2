@@ -1,0 +1,179 @@
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-secondary);
+  padding-block: 32px;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--gap-secondary);
+}
+
+.title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 133%;
+  width: fit-content;
+  color: var(--white-text);
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap-secondary);
+}
+
+.navBtn {
+  color: var(--gray-text);
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: var(--gap);
+  overflow: hidden;
+  align-items: center;
+}
+
+.item {
+  display: flex;
+  min-width: 157px;
+  max-width: 157px;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--gap);
+  padding: 16px;
+  background-color: var(--background);
+  border-radius: var(--border-radius);
+  transition: margin-left .5s ease-in-out, background .5s ease-in-out;
+}
+
+.itemWeek {
+  min-width: 275px;
+  max-width: 275px;
+}
+
+.text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+  color: var(--black-text);
+  white-space: nowrap;
+}
+
+.date::first-letter {
+  text-transform: uppercase;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+}
+
+.error {
+  height: 64px;
+}
+
+@media all and (max-width: 1023px) {
+  .block {
+    padding-block: 24px;
+  }
+
+  .header {
+    gap: 24px;
+  }
+
+  .slider {
+    gap: 24px;
+    margin: 0;
+  }
+}
+
+@media all and (max-width: 885px) {
+  .item {
+    flex-direction: column;
+    min-width: 73px;
+    max-width: 73px;
+  }
+
+  .itemWeek {
+    min-width: 131px;
+    max-width: 131px;
+  }
+
+  .error {
+    height: 128px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .block {
+    padding-block: 16px;
+  }
+
+  .slider {
+    gap: 16px;
+  }
+
+  .header {
+    gap: 16px;
+  }
+
+  .title {
+    font-size: 16px;
+    line-height: 125%;
+  }
+
+  .navBtn svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .item {
+    flex-direction: row;
+    min-width: 118px;
+    max-width: 118px;
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .itemWeek {
+    min-width: 207px;
+    max-width: 207px;
+  }
+
+  .text {
+    font-size: 12px;
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .error {
+    height: 48px;
+  }
+}
+
+@media all and (max-width: 639px) {
+  .item {
+    flex-direction: column;
+    min-width: 55px;
+    max-width: 55px;
+  }
+
+  .itemWeek {
+    min-width: 91px;
+    max-width: 91px;
+  }
+
+  .error {
+    height: 102px;
+  }
+}

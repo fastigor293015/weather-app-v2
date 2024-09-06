@@ -1,0 +1,52 @@
+.block {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  width: fit-content;
+  color: var(--tab-color);
+  font-weight: 700;
+  transform: translateY(5px);
+  padding-bottom: 5px;
+  font-size: 16px;
+  line-height: 125%;
+  transition: color 0.2s ease;
+}
+
+.block::after {
+  position: absolute;
+  content: '';
+  bottom: 0px;
+  height: 2px;
+  left: -101%;
+  width: 100%;
+  background-color: var(--tab-color);
+  transition: left 0.5s ease;
+}
+
+.block:hover::after {
+  left: 0%;
+  background-color: var(--tab-color);
+}
+
+.block.active::after {
+  background-color: var(--white-text);
+  left: 0;
+  transition: left 0.5s ease;
+}
+
+.block.active {
+  color: var(--white-text);
+  transition: color 0.2s ease;
+}
+
+.block:disabled {
+  opacity: .5;
+  pointer-events: none;
+}
+
+@media all and (max-width: 767px) {
+  .block {
+    font-size: 12px;
+    line-height: 133%;
+  }
+}

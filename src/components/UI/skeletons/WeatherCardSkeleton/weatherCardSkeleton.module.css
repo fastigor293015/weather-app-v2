@@ -1,0 +1,68 @@
+.item {
+  padding: 16px;
+  border-radius: 8px;
+  background: var(--background);
+}
+
+.top {
+  margin-bottom: 8px;
+}
+
+.top,
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.name {
+  width: 108px;
+  height: 32px;
+}
+
+.temp {
+  width: 32px;
+  height: 32px;
+}
+
+.time {
+  width: 56px;
+  height: 20px;
+}
+
+.descr {
+  width: 56px;
+  height: 20px;
+}
+
+@media all and (max-width: 767px) {
+  .item {
+    padding: 12px;
+  }
+
+  .top,
+  .bottom {
+    gap: 12px;
+  }
+
+  .name {
+    width: 72px;
+    height: 20px;
+  }
+
+  .temp {
+    width: 24px;
+    height: 20px;
+  }
+
+  .time {
+    width: 48px;
+    height: 16px;
+  }
+
+  .descr {
+    width: 48px;
+    height: 16px;
+  }
+}

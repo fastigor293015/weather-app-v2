@@ -1,0 +1,143 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  padding: 8px 0;
+  text-align: center;
+}
+
+.title,
+.degree {
+  font-weight: 700;
+}
+
+.title {
+  font-size: 24px;
+  line-height: 133%;
+}
+
+.degree {
+  font-size: 112px;
+  line-height: 100%;
+}
+
+.weather,
+.feeling,
+.day,
+.time,
+.degree,
+.title,
+.degree {
+  color: var(--white-text);
+}
+
+.weather,
+.feeling,
+.day,
+.time {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+}
+
+.day,
+.title,
+.weather {
+  margin-bottom: 8px;
+}
+
+.degree {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.weather {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.degreeCurrent {
+  display: inline-block;
+  transform: translateY(-8px);
+  position: relative;
+}
+
+.degreeCurrent::after {
+  position: absolute;
+  content: '°'
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.title::first-letter,
+.day::first-letter,
+.descr::first-letter,
+.feeling::first-letter {
+  text-transform: uppercase;
+}
+
+@media all and (max-width: 1023px) {
+  .hero {
+    padding: 0;
+  }
+
+  .title {
+    margin-bottom: 0px;
+  }
+
+  .time {
+    margin-bottom: 16px;
+  }
+
+  .degreeCurrent {
+    transform: translateY(0);
+  }
+
+  .degree {
+    margin-bottom: 32px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .title {
+    font-size: 16px;
+    line-height: 125%;
+    margin-bottom: 4px;
+  }
+
+  .day {
+    margin-bottom: 4px;
+  }
+
+  .degree {
+    font-size: 56px;
+    line-height: 100%;
+  }
+
+  .time,
+  .degree {
+    margin-bottom: 14px;
+  }
+
+  .weather {
+    margin-bottom: 8px;
+  }
+
+  .icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .weather,
+  .feeling,
+  .day,
+  .time {
+    font-size: 14px;
+    line-height: 114%;
+  }
+}

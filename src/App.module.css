@@ -1,0 +1,12 @@
+.content {
+  width: 100%;
+}
+
+.content[data-isdrop='true'] {
+  filter: blur(25px);
+  background: var(--background-main);
+}
+
+.hidden {
+  overflow-y: hidden;
+}

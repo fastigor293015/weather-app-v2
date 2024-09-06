@@ -1,0 +1,97 @@
+.label {
+  --icons-container-width: 104px;
+  --icons-container-height: 48px;
+  --icons-container-padding: 0 12px;
+  --switch-indicator-width: 56px;
+  --icon-size: 24px;
+  --active-icon-size: 32px;
+  --sun-color: #B6B6B6;
+  --moon-color: var(--black-text);
+  --active-icon-color: var(--white-text);
+  flex-shrink: 0;
+  position: relative;
+  width: var(--icons-container-width);
+  border-radius: 8px;
+  background: var(--background);
+  cursor: pointer;
+}
+
+.label:hover {
+  background: var(--background-hover);
+}
+
+.checkbox {
+  position: absolute;
+  top: -1000px;
+  opacity: 0;
+}
+
+.iconsContainer {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--icons-container-height);
+  width: var(--icons-container-width);
+  padding: var(--icons-container-padding);
+}
+
+.iconsContainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  width: var(--switch-indicator-width);
+  border-radius: 8px;
+  background: var(--background-main);
+  box-shadow: 2px 0px 6px 0px rgba(0, 0, 0, 0.15);
+  transition: transform .5s ease-in-out, box-shadow .5s ease-in-out, background .5s ease-in-out;
+}
+
+.checkbox:checked~.iconsContainer::before {
+  box-shadow: -4px 0px 8px 0px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(30px);
+  transform: translateX(calc(var(--icons-container-width) - 100%));
+}
+
+.sunIcon,
+.moonIcon {
+  position: relative;
+  z-index: 2;
+  width: var(--icon-size);
+  height: var(--icon-size);
+  transition: color .5s ease-in-out, width .5s ease-in-out, height .5s ease-in-out;
+}
+
+.checkbox:not(:checked)~.iconsContainer .sunIcon {
+  width: var(--active-icon-size);
+  height: var(--active-icon-size);
+  color: var(--active-icon-color);
+}
+
+.checkbox:not(:checked)~.iconsContainer .moonIcon {
+  color: var(--moon-color);
+}
+
+.checkbox:checked~.iconsContainer .sunIcon {
+  color: var(--sun-color);
+}
+
+.checkbox:checked~.iconsContainer .moonIcon {
+  width: var(--active-icon-size);
+  height: var(--active-icon-size);
+  color: var(--white-text);
+}
+
+@media all and (max-width: 767px) {
+  .label {
+    --icons-container-width: 72px;
+    --icons-container-height: 32px;
+    --icons-container-padding: 0 8px;
+    --switch-indicator-width: 40px;
+    --icon-size: 16px;
+    --active-icon-size: 24px;
+  }
+}

@@ -1,0 +1,54 @@
+.block {
+  --progress: 0;
+  --size: 8px;
+  position: relative;
+  height: var(--size);
+  width: 100%;
+}
+
+.circle {
+  position: absolute;
+  /* z-index: 10; */
+  top: 0;
+  left: var(--progress);
+  width: var(--size);
+  height: var(--size);
+  border-radius: 100%;
+  background-color: var(--white-text);
+}
+
+.line {
+  --offset: 4px;
+  --offset-sm: 6px;
+  /* z-index: 1; */
+  height: var(--size);
+  border-radius: var(--border-radius);
+  -webkit-mask: radial-gradient(circle at calc(var(--progress) + var(--offset)),
+      transparent var(--offset-sm),
+      black var(--offset-sm),
+      black var(--offset-sm));
+  mask: radial-gradient(circle at calc(var(--progress) + var(--offset)),
+      transparent var(--offset-sm),
+      black var(--offset-sm),
+      black var(--offset-sm));
+}
+
+.normal {
+  background: var(--background-skeleton);
+}
+
+.hight {
+  background: var(--progressbar-gradient);
+  opacity: 0.4;
+}
+
+@media all and (max-width: 767px) {
+  .block {
+    --size: 6px;
+  }
+
+  .line {
+    --offset: 3px;
+    --offset-sm: 5px;
+  }
+}

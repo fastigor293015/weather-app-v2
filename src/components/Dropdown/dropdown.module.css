@@ -1,0 +1,132 @@
+.dropdown {
+  position: absolute;
+  top: calc(100% + 16px);
+  right: 0;
+  left: 0;
+  z-index: 50;
+  overflow: hidden;
+}
+
+.dropdown:hover,
+.dropdown:focus {
+  background-color: var(--background);
+}
+
+.dropdownContainer {
+  max-height: calc(100vh - 128px - 16px);
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.dropdownContainer section:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.header {
+  display: flex;
+  margin-bottom: 12px;
+  gap: 16px;
+  justify-content: space-between;
+}
+
+.heading {
+  font-weight: 700;
+  line-height: 1.333;
+  font-size: 24px;
+}
+
+.cart {
+  color: var(--gray-text);
+}
+
+.cart:disabled {
+  color: var(--text-disabled);
+}
+
+.queriesList>li:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.autocompleteList {
+  margin-left: -16px;
+  margin-right: -16px;
+}
+
+.autocompleteBtn {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--color-placeholder);
+  text-align: left;
+  transition: background .2s ease-in-out;
+}
+
+.autocompleteBtn .highlighted {
+  color: var(--black-text);
+}
+
+.autocompleteBtn:hover,
+.autocompleteBtn:focus {
+  background: var(--background-hover);
+}
+
+.text {
+  color: var(--gray-text);
+}
+
+@media all and (max-width: 1023px) {
+  .dropdownContainer {
+    max-height: calc(100vh - 112px - 16px);
+  }
+}
+
+@media all and (max-width: 767px) {
+  .dropdown {
+    top: calc(100% + 12px);
+  }
+
+  .dropdownContainer {
+    max-height: calc(100vh - 76px - 12px);
+    padding: 12px;
+  }
+
+  .dropdownContainer section:not(:last-child) {
+    margin-bottom: 12px;
+  }
+
+  .header {
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+
+  .heading {
+    line-height: 20px;
+    font-size: 16px;
+  }
+
+  .queriesList>li:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  .autocompleteList {
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+
+  .autocompleteBtn {
+    padding: 8px 12px;
+    font-size: 14px;
+    line-height: 1.143;
+  }
+
+  .cart svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .text {
+    margin-inline: 12px;
+  }
+}
